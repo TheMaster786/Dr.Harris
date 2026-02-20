@@ -351,7 +351,7 @@
             transform: translateY(-2px);
         }
 
-        /* Services Grid */
+        /* Services Section - Redesigned with Images */
         .services {
             padding: 80px 0;
             background: var(--neutral-50);
@@ -382,8 +382,8 @@
 
         .service-card {
             background: var(--white);
-            padding: 32px;
             border-radius: 24px;
+            overflow: hidden;
             box-shadow: var(--shadow);
             transition: all 0.3s;
             border: 1px solid var(--neutral-200);
@@ -392,35 +392,58 @@
         .service-card:hover {
             transform: translateY(-5px);
             box-shadow: var(--shadow-lg);
-            border-color: var(--primary);
         }
 
-        .service-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 24px;
+        .service-image {
+            width: 100%;
+            height: 200px;
+            overflow: hidden;
+            position: relative;
         }
 
-        .service-icon i {
-            font-size: 28px;
-            color: var(--white);
+        .service-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
         }
 
-        .service-card h3 {
+        .service-card:hover .service-image img {
+            transform: scale(1.1);
+        }
+
+        .service-content {
+            padding: 24px;
+        }
+
+        .service-content h3 {
             font-size: 20px;
-            margin-bottom: 16px;
+            margin-bottom: 12px;
             color: var(--neutral-900);
+            font-weight: 600;
         }
 
-        .service-card p {
+        .service-content p {
             color: var(--neutral-600);
-            font-size: 15px;
+            font-size: 14px;
             line-height: 1.6;
+            margin-bottom: 16px;
+        }
+
+        .service-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 12px;
+        }
+
+        .service-tag {
+            background: var(--neutral-100);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 12px;
+            color: var(--neutral-600);
+            border: 1px solid var(--neutral-200);
         }
 
         @media (max-width: 1024px) {
@@ -830,7 +853,7 @@
             </div>
         </section>
 
-        <!-- Services Section -->
+        <!-- Services Section - Updated with Images from GitHub -->
         <section class="services">
             <div class="container">
                 <div class="section-header">
@@ -839,52 +862,100 @@
                 </div>
 
                 <div class="services-grid">
+                    <!-- Nutrition & Weight Management -->
                     <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-apple-alt"></i>
+                        <div class="service-image">
+                            <img src="images/Nutrition & Weight Management.jpeg" alt="Nutrition & Weight Management" onerror="this.src='https://placehold.co/400x300/2b5f5c/white?text=Nutrition'">
                         </div>
-                        <h3>Nutrition & Weight Management</h3>
-                        <p>Personalized nutrition plans and body composition analysis for optimal health.</p>
+                        <div class="service-content">
+                            <h3>Nutrition & Weight Management</h3>
+                            <p>Personalized nutrition plans and body composition analysis for optimal health.</p>
+                            <div class="service-tags">
+                                <span class="service-tag">Gut Health</span>
+                                <span class="service-tag">Probiotics</span>
+                                <span class="service-tag">Digestive Enzymes</span>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Primary Naturopathic Care -->
                     <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-heartbeat"></i>
+                        <div class="service-image">
+                            <img src="images/Primary Naturopathic Care.jpeg" alt="Primary Naturopathic Care" onerror="this.src='https://placehold.co/400x300/2b5f5c/white?text=Primary+Care'">
                         </div>
-                        <h3>Primary Naturopathic Care</h3>
-                        <p>Comprehensive primary health care with provider referral services.</p>
+                        <div class="service-content">
+                            <h3>Primary Naturopathic Care</h3>
+                            <p>Comprehensive primary health care with provider referral services.</p>
+                            <div class="service-tags">
+                                <span class="service-tag">Women's Health</span>
+                                <span class="service-tag">Hormone Balance</span>
+                                <span class="service-tag">Vitality</span>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Chronic Disease Management -->
                     <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-chart-line"></i>
+                        <div class="service-image">
+                            <img src="images/Chronic Disease Management.jpeg" alt="Chronic Disease Management" onerror="this.src='https://placehold.co/400x300/2b5f5c/white?text=Chronic+Disease'">
                         </div>
-                        <h3>Chronic Disease Management</h3>
-                        <p>Lifestyle coaching and management for chronic conditions.</p>
+                        <div class="service-content">
+                            <h3>Chronic Disease Management</h3>
+                            <p>Lifestyle coaching and management for chronic conditions.</p>
+                            <div class="service-tags">
+                                <span class="service-tag">Men's Health</span>
+                                <span class="service-tag">Performance</span>
+                                <span class="service-tag">Longevity</span>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Preventative & Alternative Care -->
                     <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-leaf"></i>
+                        <div class="service-image">
+                            <img src="images/Preventative & Alternative Care.jpeg" alt="Preventative & Alternative Care" onerror="this.src='https://placehold.co/400x300/2b5f5c/white?text=Preventative+Care'">
                         </div>
-                        <h3>Preventative & Alternative Care</h3>
-                        <p>Complementary and alternative approaches to wellness.</p>
+                        <div class="service-content">
+                            <h3>Preventative & Alternative Care</h3>
+                            <p>Complementary and alternative approaches to wellness.</p>
+                            <div class="service-tags">
+                                <span class="service-tag">Immune Support</span>
+                                <span class="service-tag">Natural Defenses</span>
+                                <span class="service-tag">Wellness</span>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Integrative Holistic Care -->
                     <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-brain"></i>
+                        <div class="service-image">
+                            <img src="images/ntegrative Holistic Care.jpeg" alt="Integrative Holistic Care" onerror="this.src='https://placehold.co/400x300/2b5f5c/white?text=Holistic+Care'">
                         </div>
-                        <h3>Integrative Holistic Care</h3>
-                        <p>Homeopathic care with Quantum Health Analyzer technology.</p>
+                        <div class="service-content">
+                            <h3>Integrative Holistic Care</h3>
+                            <p>Homeopathic care with Quantum Health Analyzer technology.</p>
+                            <div class="service-tags">
+                                <span class="service-tag">Energy Healing</span>
+                                <span class="service-tag">Quantum Analysis</span>
+                                <span class="service-tag">Balance</span>
+                            </div>
+                        </div>
                     </div>
 
+                    <!-- Anti-aging & Pain Management -->
                     <div class="service-card">
-                        <div class="service-icon">
-                            <i class="fas fa-spa"></i>
+                        <div class="service-image">
+                            <img src="images/Anti-aging & Pain Management.jpeg" alt="Anti-aging & Pain Management" onerror="this.src='https://placehold.co/400x300/2b5f5c/white?text=Anti-aging'">
                         </div>
-                        <h3>Anti-aging & Pain Management</h3>
-                        <p>Laser, light therapy, and natural pain relief solutions.</p>
+                        <div class="service-content">
+                            <h3>Anti-aging & Pain Management</h3>
+                            <p>Laser, light therapy, and natural pain relief solutions.</p>
+                            <div class="service-tags">
+                                <span class="service-tag">Pain Relief</span>
+                                <span class="service-tag">Anti-aging</span>
+                                <span class="service-tag">Regeneration</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
